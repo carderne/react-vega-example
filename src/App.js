@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BarChart from "./BarChart.js";
 
-function App() {
+const barData = {
+  table: [
+    { category: "A", amount: 28 },
+    { category: "B", amount: 55 },
+    { category: "C", amount: 43 },
+    { category: "D", amount: 91 },
+    { category: "E", amount: 81 },
+    { category: "F", amount: 53 },
+    { category: "G", amount: 19 },
+    { category: "H", amount: 89 },
+  ],
+};
+
+function handleHover(...args) {
+  console.log(args);
+}
+const signalListeners = { tooltip: handleHover };
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ margin: "100px auto 0px auto", maxWidth: 960 }}>
+      <BarChart data={barData} signalListeners={signalListeners} />
     </div>
   );
 }
-
-export default App;

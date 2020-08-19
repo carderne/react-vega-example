@@ -1,3 +1,9 @@
+This is an example demonstrating how to use [react-vega](https://github.com/vega/react-vega) to render a bar chart.
+
+See [this PR](https://github.com/vega/react-vega/pull/201) for more details.
+
+<hr />
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
